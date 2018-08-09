@@ -13,8 +13,6 @@ Because writing `document.createElement(...)` is no-fun. Alternative surely exis
 
 ## How
 
-See the `example/index.html` as an example where html is added to the `body` trough javascript.
-
 in the form off:
 
 		var html_object = (attribute_object, children1, children2, children3 ...)
@@ -37,7 +35,8 @@ ex:
 			),
 			button(
 				{ onclick : (evt) => alert('look on press event') }, 
-				'i am a button press me')
+				'i am a button press me'
+			)
 	)
 
 	document.body.appendChild(some_html)
@@ -46,7 +45,7 @@ this will generate this:
 
 ```html
 	<div id="main" class="some_class">
-		<h1 style="background-color: red; background-position: initial initial; background-repeat: initial initial;">
+		<h1 style="background-color: red;">
 			header 1
 		</h1>
 		<p style="text-decoration: underline;">
@@ -58,7 +57,7 @@ this will generate this:
 	</div>
 ```
 
-Notes:
+### Notes:
 
 - attributes starting with `on` and which value is a funtion will be considered as eventListners and attached to the html-object
 - `style` attribute will be considered as CSS styles
