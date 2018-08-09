@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../mini_html.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	window.onload = function () {
+		console.log('mini-html')
+		let some_html = div(
+				{
+					id:'main',
+					class: 'some_class',
+				},
+				h1(
+					{ style: { background:'red'} },
+					'header 1'
+				),
+				p(
+					{ style : {'text-decoration' : 'underline' } },
+					'some underline text'
+				),
+				button(
+					{ onclick: (evt) => alert('look on press event') }, 
+					'i am a button press me')
+		)
+
+		document.body.appendChild(some_html)
+	}
+</script>
+</html>
